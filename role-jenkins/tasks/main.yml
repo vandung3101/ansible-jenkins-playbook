@@ -36,3 +36,6 @@
 
     - name: Get jenkins password
       ansible.builtin.command: cat /var/lib/jenkins/secrets/initialAdminPassword
+      register: jenkins_password
+    - debug:
+        var: jenkins_password
